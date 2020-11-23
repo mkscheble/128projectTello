@@ -6,7 +6,7 @@ import matplotlib as mpl
 import pandas as pd
 
 aruco_dict = aruco.Dictionary_get(aruco.DICT_6X6_250)
-
+#adsfkjlasldjf;laskjdfsjadflkasldjflsa;dfl
 fig = plt.figure()
 nx = 4
 ny = 3
