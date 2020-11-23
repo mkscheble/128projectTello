@@ -9,7 +9,7 @@ height = 480  # HEIGHT OF THE IMAGE
 deadZone =100
 ######################################################################
  
-startCounter =0
+startCounter =1
  
 # CONNECT TO TELLO
 me = Tello()
@@ -168,23 +168,23 @@ while True:
     getContours(imgDil, imgContour)
     display(imgContour)
  
-    ################# FLIGHT
-    # if startCounter == 0:
-    #    me.takeoff()
-    #    startCounter = 1
+    ################ FLIGHT
+    if startCounter == 0:
+       me.takeoff()
+       startCounter = 1
  
  
     if dir == 1:
        me.yaw_velocity = 0
        print(-601)
     elif dir == 2:
-       me.yaw_velocity = 60
+       me.yaw_velocity = 0
        print(602)
     elif dir == 3:
-       me.up_down_velocity= 60
+       me.up_down_velocity= 0
        print(603)
     elif dir == 4:
-       me.up_down_velocity= -60
+       me.up_down_velocity= -0
        print(-604)
     else:
        me.left_right_velocity = 0; me.for_back_velocity = 0;me.up_down_velocity = 0; me.yaw_velocity = 0
