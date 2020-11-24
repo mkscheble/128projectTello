@@ -319,6 +319,7 @@ while True:
     print(dir)
     print(me.get_battery())
     file.write(%s, %s, str(position), str(time.time()))
+    file.flush()
     # file1.write(position)
     # file1.flush()
  
