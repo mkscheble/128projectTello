@@ -318,7 +318,7 @@ while True:
        me.send_rc_control(me.left_right_velocity, me.for_back_velocity, me.up_down_velocity, me.yaw_velocity)
     print(dir)
     print(me.get_battery())
-    file.write(%s, %s, str(position), str(time.time()))
+    file.write("%s, %s" % (str(position), str(time.time())))
     file.flush()
     # file1.write(position)
     # file1.flush()
