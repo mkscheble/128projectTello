@@ -330,7 +330,7 @@ while True:
         me.land()
         stateStop.set()  # set stop variable
         stateThread.join()   # wait for termination of state thread before closing socket
-        writeDataFile(State_data_file_name)
+        # writeDataFile(State_data_file_name)
         file.close()
         # file1.close()
         break
