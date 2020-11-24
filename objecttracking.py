@@ -151,8 +151,7 @@ def receive():
       break
 
 
-State_data_file_name = 'statedatatime.txt'
-State_data_file_name1 = 'statedatapos.txt'
+State_data_file_name = 'statedata.txt'
 
 # receiveThread = threading.Thread(target=receive)
 # receiveThread.daemon = True
@@ -165,7 +164,7 @@ State_data_file_name1 = 'statedatapos.txt'
 # stateStop = threading.Event()
 # stateStop.clear()
 # stateThread.start()
-file = open("statedatatime.txt", "w")
+file = open("statedata.txt", "w")
 # file1 = open("statedatapos.txt", "w")
    
 
@@ -319,7 +318,7 @@ while True:
        me.send_rc_control(me.left_right_velocity, me.for_back_velocity, me.up_down_velocity, me.yaw_velocity)
     print(dir)
     print(me.get_battery())
-    file.write(str(position))
+    file.write(%s, %s, str(position), str(time.time()))
     # file1.write(position)
     # file1.flush()
  
